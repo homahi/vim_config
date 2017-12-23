@@ -1,0 +1,39 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+
+[[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]] # FileTree
+repo = 'scrooloose/nerdtree'
+
+[[plugins]] # ColorScheme
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]] # vim git
+repo = 'tpope/vim-fugitive'
+
+[[plugins]] # FileExplorer
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'Chiel92/vim-autoformat'
+add_hock="""
+	let g:formatterpath = ['/some/path/to/a/folder', '/home/superman/formatters']
+"""
+

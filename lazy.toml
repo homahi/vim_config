@@ -1,0 +1,45 @@
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['md', 'markdown']
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+hook_source = '''
+  imap <C-k> <Plug>(neosnippet_expand_or_jump)
+  smap <C-k> <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k> <Plug>(neosnippet_expand_target)
+  if has('conceal')
+    set conceallevel=2 concealcursor=niv
+  endif
+'''
+on_i  = 1
+on_ft = ['snippet']
+depends = ['neosnippet-snippets']
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft = ['ts', 'typescript']
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['ts','typescript']
+
+[[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+on_ft = ['ts','typescript']
+
+[[plugins]]
+repo = 'mhartington/nvim-typescript'
+on_ft = ['ts','typescript']
+
+[[plugins]]
+repo = 'jason0x43/vim-js-indent'
+on_ft = ['ts','typescript']
+
+[[plugins]] 
+repo = 'cohama/lexima.vim'
+on_i = 1
