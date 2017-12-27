@@ -1,8 +1,8 @@
 set encoding=UTF-8
 set title " タイトルにフォルダパスを追加
 set termencoding=UTF-8
-set columns=200
-set lines=60 " 画面サイズ
+" set columns=200
+" set lines=60 " 画面サイズ
 scriptencoding utf-8
 inoremap <silent> jj <ESC>
 set laststatus=2 " ステータスラインを常に表示
@@ -23,6 +23,8 @@ set expandtab " タブを複数行括弧に変更
 set autoindent " 改行時に前の行のインデントを利用する
 set smartindent " 改行じに入力された行の直継に合わせて次の行のインデントを増減する
 set hidden " 保存されて居ないファイルがあるときも別のファイルを開けるようにする
+
+
 
 " jvgrepが存在するときは置き換える
 if executable('jvgrep')
@@ -88,10 +90,17 @@ let g:deoplete#enable_at_startup = 1
 
 " neovim terminal mapping
 if has('nvim')
-	" 新しいタブでターミナルを起動
-	nnoremap @t :tabe<CR>:terminal<CR>
-	" Ctrl + q でターミナルを終了
-	tnoremap <C-q> <C-\><C-n>:q<CR>
-	" ESCでターミナルモードからノーマルモードへ
-	tnoremap <C-[> <C-\><C-n>
+  " 新しいタブでターミナルを起動
+  nnoremap @t :tabe<CR>:terminal<CR>
+  " Ctrl + q でターミナルを終了
+  tnoremap <C-q> <C-\><C-n>:q<CR>
+  " ESCでターミナルモードからノーマルモードへ
+  tnoremap <C-[> <C-\><C-n>
 endif
+" NERDTree
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" 保存時の動作
+autocmd BufWritePre * :%s/\s\+$//ge
+autocmd BufWritePre * :%s/\t/  /ge

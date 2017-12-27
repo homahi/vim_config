@@ -3,6 +3,15 @@ repo = 'rcmdnk/vim-markdown'
 on_ft = ['md', 'markdown']
 
 [[plugins]]
+repo =  'kannokanno/previm'
+on_ft = ['md','markdown']
+
+
+[[plugins]]
+repo =  'tyru/open-browser.vim'
+on_ft = ['md','markdown']
+
+[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_i = 1
 
