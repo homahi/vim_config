@@ -1,8 +1,8 @@
 set encoding=UTF-8
 set title " タイトルにフォルダパスを追加
 set termencoding=UTF-8
-" set columns=200
-" set lines=60 " 画面サイズ
+set columns=200
+set lines=60 " 画面サイズ
 scriptencoding utf-8
 inoremap <silent> jj <ESC>
 set laststatus=2 " ステータスラインを常に表示
@@ -23,8 +23,11 @@ set expandtab " タブを複数行括弧に変更
 set autoindent " 改行時に前の行のインデントを利用する
 set smartindent " 改行じに入力された行の直継に合わせて次の行のインデントを増減する
 set hidden " 保存されて居ないファイルがあるときも別のファイルを開けるようにする
-
-
+" Vimの補完設定を追加
+set nocompatible
+filetype plugin on
+" vim-icon
+set guifont=Nerd_Font:h11
 
 " jvgrepが存在するときは置き換える
 if executable('jvgrep')
@@ -104,3 +107,27 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " 保存時の動作
 autocmd BufWritePre * :%s/\s\+$//ge
 autocmd BufWritePre * :%s/\t/  /ge
+
+" NERDTree
+
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeShowBookmarks=1
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+  exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+  exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
+

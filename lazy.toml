@@ -49,6 +49,10 @@ on_ft = ['ts','typescript']
 repo = 'jason0x43/vim-js-indent'
 on_ft = ['ts','typescript']
 
-[[plugins]] 
+[[plugins]]
 repo = 'cohama/lexima.vim'
 on_i = 1
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft =['html']
