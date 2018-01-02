@@ -5,6 +5,8 @@ set columns=200
 set lines=60 " 画面サイズ
 scriptencoding utf-8
 inoremap <silent> jj <ESC>
+nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
+nnoremap  <C-k> :Autoformat<CR>
 set laststatus=2 " ステータスラインを常に表示
 set showmode " 現在のモードを表示
 set showcmd " 打ったコマンドをステータスラインの下に表示
