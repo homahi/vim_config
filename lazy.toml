@@ -69,3 +69,12 @@ on_ft =['html']
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
 on_ft = ['py', 'python']
+
+# ctags
+[[plugins]]
+repo = 'szw/vim-tags'
+on_ft = ['py', 'python']
+hook_source = '''
+let g:vim_tags_auto_generate = 1
+'''
+

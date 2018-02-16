@@ -45,5 +45,6 @@ repo ='Xuyuanp/nerdtree-git-plugin'
 [[plugins]]
 repo ='airblade/vim-gitgutter'
 
+# プログラムランナー python用に入れた
 [[plugins]]
 repo ='thinca/vim-quickrun'

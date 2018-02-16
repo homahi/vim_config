@@ -100,9 +100,7 @@ if has('nvim')
   tnoremap <C-[> <C-\><C-n>
 endif
 " NERDTree
-autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " 保存時の動作
 autocmd BufWritePre * :%s/\s\+$//ge
 autocmd BufWritePre * :%s/\t/  /ge
