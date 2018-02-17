@@ -1,8 +1,6 @@
 set encoding=UTF-8
 set title " タイトルにフォルダパスを追加
 set termencoding=UTF-8
-set columns=200
-set lines=60 " 画面サイズ
 scriptencoding utf-8
 inoremap <silent> jj <ESC>
 nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
@@ -82,9 +80,6 @@ endif
 
 au BufRead,BufNewFile *.md set filetype=markdown
 let g:vim_markdown_folding_disabled=1
-let twitvim_browser_cmd = 'open' " for Mac
-let twitvim_force_ssl = 1
-let twitvim_count = 40
 
 colorscheme hybrid
 
@@ -103,9 +98,7 @@ if has('nvim')
   tnoremap <C-[> <C-\><C-n>
 endif
 " NERDTree
-autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " 保存時の動作
 autocmd BufWritePre * :%s/\s\+$//ge
 autocmd BufWritePre * :%s/\t/  /ge
@@ -140,3 +133,13 @@ vmap ib <Plug>(textobj-multiblock-i)
 
 " Vueの設定
 autocmd BufNewFile,BufRead *.vue set filetype=html
+
+" Previm
+ augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+hi link htmlItalic LineNr
+hi link htmlBold WarningMsg
+hi link htmlBoldItalic ErrorMsg
+
