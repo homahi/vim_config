@@ -56,3 +56,8 @@ on_i = 1
 [[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft =['html']
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft =['typescript','ts']
+
