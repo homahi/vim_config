@@ -50,6 +50,22 @@ repo ='Xuyuanp/nerdtree-git-plugin'
 [[plugins]]
 repo ='airblade/vim-gitgutter'
 
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'osyo-manga/vim-textobj-multiblock'
+
+[[plugins]]
+repo ='tpope/vim-surround'
+
+
+# Vueを書く環境を作る
+[[plugins]]
+repo='Shougo/context_filetype.vim'
+
+[[plugins]]
+repo='osyo-manga/vim-precious'
 # プログラムランナー python用に入れた
 [[plugins]]
 repo ='thinca/vim-quickrun'

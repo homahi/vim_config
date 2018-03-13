@@ -67,6 +67,10 @@ repo = 'mattn/emmet-vim'
 on_ft =['html']
 
 [[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft =['typescript','ts']
+
+[[plugins]]
 repo = 'davidhalter/jedi-vim'
 on_ft = ['py', 'python']
 

@@ -1,8 +1,6 @@
 set encoding=UTF-8
 set title " タイトルにフォルダパスを追加
 set termencoding=UTF-8
-" set columns=200
-" set lines=60 " 画面サイズ
 scriptencoding utf-8
 set clipboard=unnamed
 inoremap <silent> jj <ESC>
@@ -129,6 +127,14 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
+" mapping
+omap ab <Plug>(textobj-multiblock-a)
+omap ib <Plug>(textobj-multiblock-i)
+vmap ab <Plug>(textobj-multiblock-a)
+vmap ib <Plug>(textobj-multiblock-i)
+
+" Vueの設定
+autocmd BufNewFile,BufRead *.vue set filetype=html
 
 " Previm
  augroup PrevimSettings
