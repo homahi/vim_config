@@ -78,3 +78,6 @@ hook_source = '''
 let g:vim_tags_auto_generate = 1
 '''
 
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+on_ft = ['uml']

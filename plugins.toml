@@ -30,6 +30,11 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]] # FileExplorer
 repo = 'Shougo/denite.nvim'
+add_hock="""
+call denite#custom#map('insert', "<C-j>", '<denite:move_to_next_line>')
+call denite#custom#map('insert', "<C-k>", '<denite:move_to_previous_line>')
+call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
+"""
 
 [[plugins]]
 repo = 'Chiel92/vim-autoformat'

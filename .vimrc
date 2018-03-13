@@ -4,6 +4,7 @@ set termencoding=UTF-8
 " set columns=200
 " set lines=60 " 画面サイズ
 scriptencoding utf-8
+set clipboard=unnamed
 inoremap <silent> jj <ESC>
 nnoremap  <C-c><C-c> :<C-u>nohlsearch<cr><Esc>
 nnoremap  <C-k> :Autoformat<CR>
@@ -81,6 +82,7 @@ endif
 " }}}
 
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.puml set filetype=uml
 let g:vim_markdown_folding_disabled=1
 
 colorscheme hybrid
@@ -137,3 +139,8 @@ hi link htmlItalic LineNr
 hi link htmlBold WarningMsg
 hi link htmlBoldItalic ErrorMsg
 
+" Denite
+nnoremap <silent> <C-p> :<C-u>Denite file_rec<CR>
+nnoremap <silent> ;g :<C-u>Denite -buffer-name=search -mode=normal grep<CR>
+nnoremap <silent> ;fg :Denite grep<CR>
+nnoremap <silent> ;cg :DeniteCursorWord grep<CR>
