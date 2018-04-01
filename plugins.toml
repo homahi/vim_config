@@ -69,3 +69,7 @@ repo='osyo-manga/vim-precious'
 # プログラムランナー python用に入れた
 [[plugins]]
 repo ='thinca/vim-quickrun'
+
+# 複数行コメント
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
