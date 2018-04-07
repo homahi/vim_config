@@ -1,4 +1,4 @@
-[[plugins]]
+[[plugins]] # ファイルエクスプローラー
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
@@ -22,7 +22,7 @@ repo = 'scrooloose/nerdtree'
 [[plugins]] # ColorScheme
 repo = 'w0ng/vim-hybrid'
 
-[[plugins]]
+[[plugins]] # snipeet
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]] # vim git
@@ -36,7 +36,7 @@ call denite#custom#map('insert', "<C-k>", '<denite:move_to_previous_line>')
 call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
 """
 
-[[plugins]]
+[[plugins]] # formatter
 repo = 'Chiel92/vim-autoformat'
 add_hock="""
 let g:autoformat_autoindent = 0
@@ -47,16 +47,16 @@ let g:autoformat_remove_trailing_spaces = 0
 [[plugins]] # gitplugin
 repo ='Xuyuanp/nerdtree-git-plugin'
 
-[[plugins]]
+[[plugins]] # 変更箇所がわかる
 repo ='airblade/vim-gitgutter'
 
-[[plugins]]
+[[plugins]] # ひらがなを認識する
 repo = 'kana/vim-textobj-user'
 
 [[plugins]]
 repo = 'osyo-manga/vim-textobj-multiblock'
 
-[[plugins]]
+[[plugins]] # 指定範囲を囲む
 repo ='tpope/vim-surround'
 
 
