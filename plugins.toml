@@ -12,10 +12,6 @@ depends = ['context_filetype.vim']
 [[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
 repo = 'Shougo/context_filetype.vim'
 
-[[plugins]] # toml syntax
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
 [[plugins]] # FileTree
 repo = 'scrooloose/nerdtree'
 

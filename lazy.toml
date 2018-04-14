@@ -83,4 +83,7 @@ hook_source = '''
 let g:vim_tags_auto_generate = 1
 '''
 
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
 
