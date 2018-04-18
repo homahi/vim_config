@@ -1,4 +1,4 @@
-[[plugins]]
+[[plugins]] # ファイルエクスプローラー
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
@@ -12,17 +12,13 @@ depends = ['context_filetype.vim']
 [[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
 repo = 'Shougo/context_filetype.vim'
 
-[[plugins]] # toml syntax
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
 [[plugins]] # FileTree
 repo = 'scrooloose/nerdtree'
 
 [[plugins]] # ColorScheme
 repo = 'w0ng/vim-hybrid'
 
-[[plugins]]
+[[plugins]] # snipeet
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]] # vim git
@@ -36,7 +32,7 @@ call denite#custom#map('insert', "<C-k>", '<denite:move_to_previous_line>')
 call denite#custom#map('insert', 'jj', '<denite:enter_mode:normal>')
 """
 
-[[plugins]]
+[[plugins]] # formatter
 repo = 'Chiel92/vim-autoformat'
 add_hock="""
 let g:autoformat_autoindent = 0
@@ -47,16 +43,16 @@ let g:autoformat_remove_trailing_spaces = 0
 [[plugins]] # gitplugin
 repo ='Xuyuanp/nerdtree-git-plugin'
 
-[[plugins]]
+[[plugins]] # 変更箇所がわかる
 repo ='airblade/vim-gitgutter'
 
-[[plugins]]
+[[plugins]] # ひらがなを認識する
 repo = 'kana/vim-textobj-user'
 
 [[plugins]]
 repo = 'osyo-manga/vim-textobj-multiblock'
 
-[[plugins]]
+[[plugins]] # 指定範囲を囲む
 repo ='tpope/vim-surround'
 
 
@@ -69,3 +65,7 @@ repo='osyo-manga/vim-precious'
 # プログラムランナー python用に入れた
 [[plugins]]
 repo ='thinca/vim-quickrun'
+
+# 複数行コメント
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
